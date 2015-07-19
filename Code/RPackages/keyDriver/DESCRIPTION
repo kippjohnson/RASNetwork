@@ -1,0 +1,12 @@
+Package: keyDriver
+Type: Package
+Title: Performs Key Driver Analysis
+Version: 0.1
+Depends: class, cluster, rpart, lattice
+Date: 2010-02-05
+Author: Bin Zhang
+Maintainer: Bin Zhang <Bin.Zhang@SageBase.Org>
+Description: More about what it does (maybe more than one line)
+License: Artistic-2.0
+LazyLoad: yes
+Packaged: 2010-04-23 16:17:50 UTC; david

@@ -1,0 +1,2 @@
+subnet	mean_downstream	sd_downstream	enrichedNodes_cut	mean_logP	sd_logP	cut_logP
+RASopathy_gene	223.427937915743	269.131156041091	0.5	5.15398609898549	0.376318368952898	5.53030446793839

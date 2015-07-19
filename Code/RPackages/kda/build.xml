@@ -1,0 +1,152 @@
+<project name="kda" default="dist" basedir=".">
+	
+	<property name="java.src" location="java/src"/>
+	<property name="plugin.src" location="java/plugin-src"/>
+	<property name="test.src" location="java/test"/>
+	<property name="data.dir" location="data"/>
+	
+	<property name="java.lib" location="java/lib"/>
+	
+	<property name="build.dir" location="build~"/>
+	<property name="classes.dir" location="${build.dir}/classes"/>
+	<property name="rlib.dir" location="${build.dir}/Rlib"/>
+	
+	<property name="R.directed.yeast.dir" location="${build.dir}/yeast-directed-demo/"/>
+	<property name="R.undirected.yeast.dir" location="${build.dir}/yeast-undirected-demo/"/>
+	
+	<property name="plugin.dir" location="${classes.dir}/org/sage/kda/plugin"/>
+	<property name="pluginClass" value="org.sage.kda.plugin.KeyDriverAnalysisPlugin"/>
+	
+	<property name="kda.jar" location="${build.dir}/kda-plugin.jar"/>
+	<property name="kda.tar" location="${build.dir}/kda.tar"/>
+	<property name="kda.zip" location="${build.dir}/kda.zip"/>
+	
+	<path id="java.libs.path">
+		<fileset dir="${java.lib}">
+		        <include name="**/*.jar"/>
+		</fileset>
+	</path>
+	
+	<path id="src.paths">
+		<fileset dir="${java.src}"/>
+		<fileset dir="${plugin.src}"/>
+	</path>
+	
+	
+		
+	<target name="init">
+	    <!-- Create the time stamp -->
+	    <tstamp/>
+	    <!-- Create the build directory structure used by compile -->
+	    <mkdir dir="${build.dir}"/>
+		<mkdir dir="${classes.dir}"/>
+		<mkdir dir="${rlib.dir}"/>
+	</target>
+
+	<target name="compile" depends="init" description="compile the source " >
+	    <!-- Compile the java code from ${src} into ${build} -->
+	    <javac srcdir="${java.src}:${plugin.src}"
+				destdir="${classes.dir}"
+			   	classpathref="java.libs.path"/>
+	</target>
+
+	<!--
+	<target name="dist" depends="compile">
+	    <jar destfile="${build.dir}/sage-kda.jar">
+	         <fileset dir="${classes.dir}" />
+	    </jar>
+	</target>
+	-->
+	
+	<target name="Rinstall" depends="init">
+		<exec executable="R">
+			<arg value="CMD"/>
+			<arg value="INSTALL"/>
+			<arg value="-l"/>
+			<arg value="${rlib.dir}"/>
+			<arg value="keyDriver"/>
+		</exec>
+	</target>
+	
+	<target name="R_YeastDemo">
+		<antcall target="R_YeastDirected"/>
+		<antcall target="R_YeastUndirected"/>
+	</target>
+	
+	<target name="R_YeastDirected" depends="Rinstall">
+		<exec executable="R" 
+			inputstring="outputDir=&quot;${R.directed.yeast.dir}/&quot;; library(keyDriver); demo(yeast)">
+			<env key="R_LIBS" path="${env.R_LIBS}:${rlib.dir}"/>
+			<arg value="--vanilla"/>
+		</exec>
+	</target>
+		
+	<target name="R_YeastUndirected" depends="Rinstall">
+		
+		<exec executable="R" 
+			inputstring="directed=TRUE; outputDir=&quot;${R.undirected.yeast.dir}/&quot;; library(keyDriver); demo(yeast)">
+			<env key="R_LIBS" path="${env.R_LIBS}:${rlib.dir}"/>
+			<arg value="--vanilla"/>
+		</exec>
+	</target>
+	
+	<target name="JUnit_YeastDirect" depends="compile">
+		<available file="${R.directed.yeast.dir}" type="dir"
+		           property="yeast.directed.present"/>
+		<fail unless="yeast.directed.present"/>
+		<junit>
+			<formatter type="plain"/>
+			<classpath>
+				<path refid="java.libs.path"/>
+				<pathelement path="${classes.dir}"/>
+			</classpath>
+			<test name="org.sage.kda.giny.KDAYeastTest"/>
+		</junit>
+	</target>
+	
+	<target name="dist" depends="compile">
+	    <copy file="${plugin.src}/plugin.props" todir="${plugin.dir}" />
+		
+
+	    <jar destfile="${kda.jar}">
+	         <manifest>
+		         <attribute name="Cytoscape-Plugin"
+		                    value="${pluginClass}" />
+	         </manifest>
+	
+	         <fileset dir="${classes.dir}" />
+	    	 <zipfileset src="${java.lib}/commons-math-2.0.jar" excludes="META-INF/*" /> 
+	    </jar>
+		<tar destfile="${kda.tar}">
+			<tarfileset dir="${java.src}"
+			            prefix="kda/java/src">
+			</tarfileset>
+			<tarfileset dir="${plugin.src}"
+			            prefix="kda/plugin/src">
+			</tarfileset>
+			<tarfileset dir="${test.src}"
+			            prefix="kda/test/src">
+			</tarfileset>
+			<tarfileset dir="${java.lib}"
+			            prefix="kda/java/lib">
+			</tarfileset>
+			<tarfileset dir="${data.dir}" prefix="kda/data"/>
+				
+			<tarfileset prefix="kda" file="${kda.jar}"/>
+			<tarfileset prefix="kda" file="build.xml"/>
+			<tarfileset prefix="kda/docs" file="QuickStart.pdf"/>
+		</tar>
+		
+		<gzip src="${kda.tar}" destfile="${kda.tar}.gz"/>
+			
+		<zip destfile="${kda.zip}">
+			<tarfileset src="${kda.tar}"/>
+		</zip>
+	</target>
+	
+	<target name="deploy" depends="dist">
+		<copy file="${kda.jar}" 
+			todir="/Users/jguinney/sage/cytoscape-v2.6.3/plugins"/>
+	</target>
+	
+</project>
