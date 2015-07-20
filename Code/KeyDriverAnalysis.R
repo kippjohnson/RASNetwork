@@ -10,36 +10,66 @@ rm(list=ls())
 setwd("~/Projects/GelbRotation/NetworkData/KeyDriverAnalysis/")
 ################################################################################################
 ####
-var_nLayerExpansion <- 5 # Number of layers to expand network past signature (RASopathy) genes
+var_nLayerExpansion <- 6 # Number of layers to expand network past signature (RASopathy) genes
 ####
 
 # 1. read in network and signature genes
 
+################################
+#####                      #####
+##### Network in 3 columns #####
+#####                      #####
+################################
 ### PF_AD_links_for_cytoscape
-networkfilepath <- '/Users/kwj/Projects/GelbRotation/NetworkData/Networks/annotated/PF_AD_links_for_cytoscape.anno.txt'
-listMatrix <- read.table('/Users/kwj/Projects/GelbRotation/NetworkData/Networks/nodes/PF_AD_links_for_cytoscape.nodes.txt',header=TRUE)
+#networkfilepath <- '/Users/kwj/Projects/GelbRotation/NetworkData/Networks/annotated/PF_AD_links_for_cytoscape.anno.txt'
+#listMatrix <- read.table('/Users/kwj/Projects/GelbRotation/NetworkData/Networks/nodes/PF_AD_links_for_cytoscape.nodes.txt',header=TRUE)
+#colnum <- 3
 
+### delimited_blood_network.anno.txt
+networkfilepath <- '/Users/kwj/Projects/GelbRotation/NetworkData/Networks/annotated/delimited_blood_network.anno.txt'
+listMatrix <- read.table('/Users/kwj/Projects/GelbRotation/NetworkData/Networks/nodes/delimited_blood_network.nodes.txt',header=TRUE)
+colnum <- 3
+
+################################
+#####                      #####
+##### Network in 2 columns #####
+#####                      #####
+################################
 ### PF_normal_links_space_delimited
 #networkfilepath <- '/Users/kwj/Projects/GelbRotation/NetworkData/Networks/annotated/PF_normal_links_space_delimited.anno.txt'
 #listMatrix <- read.table('/Users/kwj/Projects/GelbRotation/NetworkData/Networks/nodes/PF_normal_links_space_delimited.nodes.txt',header=TRUE)
+#colnum <- 2
 
 ### ileum_links_space_delimited
 #networkfilepath <- '/Users/kwj/Projects/GelbRotation/NetworkData/Networks/annotated/ileum_links_space_delimited.anno.txt'
 #listMatrix <- read.table('/Users/kwj/Projects/GelbRotation/NetworkData/Networks/nodes/ileum_links_space_delimited.nodes.txt',header=TRUE)
+#colnum <- 2
+
+### omental_links_space_delimited.anno.tx
+#networkfilepath <- '/Users/kwj/Projects/GelbRotation/NetworkData/Networks/annotated/omental_links_space_delimited.anno.txt'
+#listMatrix <- read.table('/Users/kwj/Projects/GelbRotation/NetworkData/Networks/nodes/omental_links_space_delimited.nodes.txt',header=TRUE)
+#colnum <- 2
 
 ### delimited_risk_network
 #networkfilepath <- '/Users/kwj/Projects/GelbRotation/NetworkData/Networks/annotated/delimited_risk_network.anno.txt'
 #listMatrix <- read.table('/Users/kwj/Projects/GelbRotation/NetworkData/Networks/nodes/delimited_risk_network.nodes.txt',header=TRUE)
+#colnum <- 2
 
 ### delimited_pan_intestine_network
 #networkfilepath <- '/Users/kwj/Projects/GelbRotation/NetworkData/Networks/annotated/delimited_pan_intestine_network.anno.txt'
 #listMatrix <- read.table('/Users/kwj/Projects/GelbRotation/NetworkData/Networks/nodes/delimited_pan_intestine_network.nodes.txt',header=TRUE)
-
+#colnum <- 2
 
 net <- read.table(networkfilepath,header=TRUE)
 
-#cnet <- as.matrix(net[,1:2]) #take first two columns, only
-cnet <- as.matrix(net[,c(1,3)]) #take first two columns, only
+
+if(colnum==2){
+    # If network in 2 columns:
+    cnet <- as.matrix(net[,1:2])}
+  else{
+    # If network in 3 columns:
+    cnet <- as.matrix(net[,c(1,3)])
+}
 
 totalnodes <- union( cnet[,1] , cnet[,2] )
 
