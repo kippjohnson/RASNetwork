@@ -10,8 +10,8 @@ library(knitr) # kable() function
 dname <-  read.csv("~/Projects/GelbRotation/DrugScreen/drug_name.csv")
 targets <- read.csv("~/Projects/GelbRotation/DrugScreen/drug_target_uniprot_links.csv")
   #screen0 <- read.csv("~/Projects/GelbRotation/DrugScreen/FDA_Celine_070715.csv")
-  screen0 <- read.csv("~/Projects/GelbRotation/DrugScreen/FDA_Celine_top5.csv")
-  #screen0 <- read.csv("~/Projects/GelbRotation/DrugScreen/FDA_Celine_gt5.csv")
+  #screen0 <- read.csv("~/Projects/GelbRotation/DrugScreen/FDA_Celine_top5.csv")
+  screen0 <- read.csv("~/Projects/GelbRotation/DrugScreen/FDA_Celine_gt5.csv")
   #screen0 <- read.csv("~/Projects/GelbRotation/DrugScreen/FDA_Celine_gt4.csv")
 
 ### Merge datasets, remove unnecessary columns
