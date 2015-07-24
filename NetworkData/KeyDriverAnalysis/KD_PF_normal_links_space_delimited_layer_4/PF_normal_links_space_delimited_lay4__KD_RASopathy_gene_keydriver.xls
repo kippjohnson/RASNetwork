@@ -1,4 +1,0 @@
-keydrivers	isSignature	hits	downstream	signature_in_subnetwork	subnetwork_size	signature_in_network	network_size	signature	optimal_layer	fold_change_whole	pvalue_whole	fold_change_subnet	pvalue_subnet	pvalue_corrected_subnet	keydriver
-Contig52635_RC	0	1	1	5	186	5	7533	5	1	1506.6	0.000663746183459435	37.2	0.0268817204301075	1	1
-NAV3	0	4	134	5	186	5	7533	5	6	44.9731343283582	4.72285844323838e-07	1.11044776119403	0.569955960605031	1	1
-PCP4	0	4	134	5	186	5	7533	5	6	44.9731343283582	4.72285844323838e-07	1.11044776119403	0.569955960605031	1	1

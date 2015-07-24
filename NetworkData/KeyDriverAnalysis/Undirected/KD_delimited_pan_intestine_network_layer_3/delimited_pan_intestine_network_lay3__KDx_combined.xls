@@ -1,0 +1,2 @@
+module	keydrivers	isSignature	hits	downstream	signature_in_subnetwork	subnetwork_size	signature_in_network	network_size	signature	optimal_layer	fold_change_whole	pvalue_whole	fold_change_subnet	pvalue_subnet	pvalue_corrected_subnet	keydriver
+RASopathy_gene	MTMR9	0	1	1	7	174	11	7796	7	1	708.727272727273	0.00141097998973783	24.8571428571429	0.0402298850574713	1	1

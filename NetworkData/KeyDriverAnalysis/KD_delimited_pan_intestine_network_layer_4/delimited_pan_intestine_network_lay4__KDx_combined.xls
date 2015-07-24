@@ -1,3 +1,0 @@
-module	keydrivers	isSignature	hits	downstream	signature_in_subnetwork	subnetwork_size	signature_in_network	network_size	signature	optimal_layer	fold_change_whole	pvalue_whole	fold_change_subnet	pvalue_subnet	pvalue_corrected_subnet	keydriver
-RASopathy_gene	PTPN9	0	1	1	7	271	11	7796	7	1	708.727272727273	0.00141097998973783	38.7142857142857	0.0258302583025828	1	1
-RASopathy_gene	TMTC3	0	1	1	7	271	11	7796	7	1	708.727272727273	0.00141097998973783	38.7142857142857	0.0258302583025828	1	1

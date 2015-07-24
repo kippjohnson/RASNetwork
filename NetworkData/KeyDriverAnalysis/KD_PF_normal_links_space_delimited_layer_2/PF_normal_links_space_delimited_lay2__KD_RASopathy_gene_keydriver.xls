@@ -1,2 +1,0 @@
-keydrivers	isSignature	hits	downstream	signature_in_subnetwork	subnetwork_size	signature_in_network	network_size	signature	optimal_layer	fold_change_whole	pvalue_whole	fold_change_subnet	pvalue_subnet	pvalue_corrected_subnet	keydriver
-SYT1	0	2	2	5	26	5	7533	5	1	1506.6	3.52493990153715e-07	5.2	0.0307692307692308	0.8	1

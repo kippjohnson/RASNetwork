@@ -1,3 +1,0 @@
-module	keydrivers	isSignature	hits	downstream	signature_in_subnetwork	subnetwork_size	signature_in_network	network_size	signature	optimal_layer	fold_change_whole	pvalue_whole	fold_change_subnet	pvalue_subnet	pvalue_corrected_subnet	keydriver
-RASopathy_gene	ATP11B	0	1	1	8	210	10	7564	8	1	756.4	0.00132205182443157	26.25	0.038095238095238	1	1
-RASopathy_gene	VPS4B	0	4	23	8	210	10	7564	8	3	131.547826086957	1.34807124461601e-08	4.56521739130435	0.00579186569161098	1	1

@@ -1,3 +1,0 @@
-module	keydrivers	isSignature	hits	downstream	signature_in_subnetwork	subnetwork_size	signature_in_network	network_size	signature	optimal_layer	fold_change_whole	pvalue_whole	fold_change_subnet	pvalue_subnet	pvalue_corrected_subnet	keydriver
-RASopathy_gene	DNAJB1	0	3	40	12	113	12	7951	12	4	49.69375	2.51516282261093e-05	0.70625	0.869405100057971	1	1
-RASopathy_gene	ZSCAN30	0	3	40	12	113	12	7951	12	3	49.69375	2.51516282261093e-05	0.70625	0.869405100057971	1	1

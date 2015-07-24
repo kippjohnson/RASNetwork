@@ -1,3 +1,0 @@
-module	keydrivers	isSignature	hits	downstream	signature_in_subnetwork	subnetwork_size	signature_in_network	network_size	signature	optimal_layer	fold_change_whole	pvalue_whole	fold_change_subnet	pvalue_subnet	pvalue_corrected_subnet	keydriver
-RASopathy_gene	SLC35B3	0	5	39	6	61	10	8380	6	6	107.435897435897	4.14725231509953e-10	1.3034188034188	0.286882850600263	1	1
-RASopathy_gene	TMPO	0	2	4	6	61	10	8380	6	3	419	7.68076431159548e-06	5.08333333333333	0.0448208793630415	1	1

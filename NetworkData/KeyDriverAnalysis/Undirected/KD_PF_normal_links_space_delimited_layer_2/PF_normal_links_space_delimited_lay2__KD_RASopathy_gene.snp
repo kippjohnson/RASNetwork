@@ -1,0 +1,25 @@
+Legend 6
+SIG_GKD	SIG_LKD	SIG_NKD	NSIG_GKD	NSIG_LKD	NSIG_NKD	square	square	circle	circle	circle	circle	red	blue	lightgreen	red	blue	grey	red	blue	lightgreen	red	blue	grey	120	80	40	120	80	40	36	24	12	36	24	12*vertices 26
+AF019618	AK056916	AP2B1	ATP6V0E1	BRIP1	C20orf7	CMAS	CMYA5	Contig46578_RC	CXorf39	ENST00000258318	ENST00000285289	GUCY1B3	KRAS	LMNB1	MAP2K1	NIPSNAP3B	NRAS	QPCT	RAC3	RGS7BP	RIT1	SCAMP1	SNCA	SOS1	SYT1	grey	grey	grey	grey	grey	grey	grey	grey	grey	grey	grey	grey	grey	lightgreen	grey	lightgreen	grey	lightgreen	grey	grey	grey	lightgreen	grey	grey	lightgreen	red	circle	circle	circle	circle	circle	circle	circle	circle	circle	circle	circle	circle	circle	circle	circle	circle	circle	circle	circle	circle	circle	circle	circle	circle	circle	circle	40	40	40	40	40	40	40	40	40	40	40	40	40	40	40	40	40	40	40	40	40	40	40	40	40	120	12	12	12	12	12	12	12	12	12	12	12	12	12	12	12	12	12	12	12	12	12	12	12	12	12	36edge_color_levels	grey
+src	dst	type
+21	1	1
+23	1	1
+25	2	1
+15	5	1
+26	6	1
+26	7	1
+8	9	1
+4	10	1
+26	11	1
+26	12	1
+1	14	1
+3	15	1
+26	16	1
+16	17	1
+10	18	1
+26	19	1
+15	20	1
+15	22	1
+26	24	1
+9	25	1
+13	26	1

@@ -9,8 +9,8 @@ library(knitr) # kable() function
 ### Read in the required datasets
 dname <-  read.csv("~/Projects/GelbRotation/DrugScreen/drug_name.csv")
 targets <- read.csv("~/Projects/GelbRotation/DrugScreen/drug_target_uniprot_links.csv")
-  screen0 <- read.csv("~/Projects/GelbRotation/DrugScreen/FDA_Celine_070715.csv")
-  #screen0 <- read.csv("~/Projects/GelbRotation/DrugScreen/FDA_Celine_top5.csv")
+  #screen0 <- read.csv("~/Projects/GelbRotation/DrugScreen/FDA_Celine_070715.csv")
+  screen0 <- read.csv("~/Projects/GelbRotation/DrugScreen/FDA_Celine_top5.csv")
   #screen0 <- read.csv("~/Projects/GelbRotation/DrugScreen/FDA_Celine_gt5.csv")
   #screen0 <- read.csv("~/Projects/GelbRotation/DrugScreen/FDA_Celine_gt4.csv")
 
@@ -174,45 +174,71 @@ tab[,FDR.sig:=ifelse(FDR.pval<0.05,1,0)] # is the effect significant at p<0.05?
 tab <- tab[order(-FDR.sig, pval, FDR.pval)]
 kable(tab[Sig==1])
 
-### Poisson regression
-library(glmnet)
 
-targ$Adults0 <- ifelse(is.na(targ$Adults),0,targ$Adults)
-y <- targ$Adults0
-
-uniquetargets <- unique(targ$UniProt.ID)
-
-x <- list()
-adultvec <- unique(targ$Adults0)
-
-for(i in seq_along(unique(targ$Adults0))){
-  x[[i]] <- as.character(targ[Adults0==adultvec[i]]$UniProt.ID)
-}
-
-for(i in seq_along(uniquetargets)){
-
-  targ[, eval(paste0('exp_',uniquetargets[i])):=ifelse(uniquetargets[i] %in% sapply(x[Adults0], "["),1,0), by=.(Adults0)]
-}
-
-
-# for(i in seq_along(SigDrugs)){
-#   admit.drug.ml[,eval(paste0("Exp_",SigDrugs[i])):=ifelse(SigDrugs[i] %in% med_name_lc, 1, 0), by=.(mrn)]
+# ###
+# ### Poisson regression
+# library(glmnet)
+#
+# targ$Adults0 <- ifelse(is.na(targ$Adults),0,targ$Adults)
+# y <- targ$Adults0
+#
+# uniquetargets <- unique(targ$UniProt.ID)
+#
+# x <- list()
+# adultvec <- unique(targ$Adults0)
+#
+# for(i in seq_along(unique(targ$Adults0))){
+#   x[[i]] <- as.character(targ[Adults0==adultvec[i]]$UniProt.ID)
 # }
+#
+# for(i in seq_along(uniquetargets)){
+#
+#   targ[, eval(paste0('exp_',uniquetargets[i])):=ifelse(uniquetargets[i] %in% sapply(x[Adults0], "["),1,0), by=.(Adults0)]
+# }
+#
+#
+# # for(i in seq_along(SigDrugs)){
+# #   admit.drug.ml[,eval(paste0("Exp_",SigDrugs[i])):=ifelse(SigDrugs[i] %in% med_name_lc, 1, 0), by=.(mrn)]
+# # }
+#
+# setkey(targ,DrugBank.ID)
+# targ <- unique(targ)
+#
+# targ <- data.frame(targ)
+# exposures <- targ[,14:590]
+#
+# cv.fit <- cv.glmnet(x=as.matrix(exposures),y=targ$Adults0, family="poisson")
+# coef(cv.fit, s = "lambda.min")
+#
+# which(coef(cv.fit, s = "lambda.min")[,1]>0)
+#
+# mod_coef <- names(which(coef(cv.fit, s = "lambda.min")[,1]>0))
+# mod_coef <-
+#   strsplit(mod_coef, "_")[,2]
 
-setkey(targ,DrugBank.ID)
-targ <- unique(targ)
+kable(tab[Sig==1, .(targets,A,B,C,D,N,OR,pval,FDR.pval,Sig,FDR.sig)])
 
-targ <- data.frame(targ)
-exposures <- targ[,14:590]
+tabc <- copy(tab)
+tabc$Sig <- ifelse(tabc$Sig==1, tabc$Sig<-"Y",tabc$Sig<-"N")
+tabc$FDR.sig <- ifelse(tabc$FDR.sig==1, tabc$FDR.sig<-"Y",tabc$FDR.sig<-"N")
 
-cv.fit <- cv.glmnet(x=as.matrix(exposures),y=targ$Adults0, family="poisson")
-coef(cv.fit, s = "lambda.min")
+xtable(tabc[Sig=="Y", .(targets,A,N,OR,pval,FDR.pval,Sig,FDR.sig)],digits=c(0,0,0,0,0,2,2,1,1))
 
-which(coef(cv.fit, s = "lambda.min")[,1]>0)
 
-mod_coef <- names(which(coef(cv.fit, s = "lambda.min")[,1]>0))
-mod_coef <-
-  strsplit(mod_coef, "_")[,2]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

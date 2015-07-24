@@ -1,2 +1,0 @@
-module	keydrivers	isSignature	hits	downstream	signature_in_subnetwork	subnetwork_size	signature_in_network	network_size	signature	optimal_layer	fold_change_whole	pvalue_whole	fold_change_subnet	pvalue_subnet	pvalue_corrected_subnet	keydriver
-RASopathy_gene	KRAS	1	2	2	7	86	11	7796	7	1	708.727272727273	1.81010903109471e-06	12.2857142857143	0.00574555403556772	0.494117647058824	1
