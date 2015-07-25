@@ -1,12 +1,21 @@
-### Kipp Johnson
-### kipp.johnson@icahn.mssm.edu
+###  Kipp Johnson
+###  kipp.johnson@icahn.mssm.edu
 ###
-### Run with -h for usage
+###  Usage: python -n network -g geneset -l nlayer
+###  Run with -h/--help for additional information
 ###
-###  input should be of form:
+###  Input Network should be of form:
 ###  source target
-###  RAS    MAPK
+###  RAS MAPK
 ###
+###  (i.e. RAS\sMAPK)
+###  Do not include source/target row; code doesn't deal with headers currently
+###
+###  Input gene set of interest sould be a file with just 1 gene symbol per line
+###
+###  Could easily be modified to only expand upstream or downstream
+###  --> just don't call find_upstream_nodes() or find_downstream_nodes()
+###      in get_layer()
 
 import argparse
 import re
@@ -23,7 +32,7 @@ inputgenes = open(args.geneset)
 nLayers = int(args.layer)
 
 if nLayers < 1:
-    raise ValueError('Number of layers muste be greater than or equal to 1')
+    raise ValueError('Number of layers must be greater than or equal to 1')
 
 ## Read the genes into list called geneset
 def parse_geneset(inputgeneset):
