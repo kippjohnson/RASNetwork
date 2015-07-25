@@ -4,6 +4,10 @@
 ## July 24th, 2015
 ################################################################################
 
+### HTTP Post code taken from RNA-seq analysis script:
+### http://amp.pharm.mssm.edu/Enrichr/#help
+### See bottom of page
+
 import cookielib, urllib2, urllib
 import poster
 import sys
@@ -64,7 +68,7 @@ parser = argparse.ArgumentParser(description="""
         Disease_Signatures_from_GEO_up
         Disease_Signatures_from_GEO_down
 
-    Results printed to STDOUT 
+    Results printed to STDOUT
      """,formatter_class=argparse.RawTextHelpFormatter)
 
 parser.add_argument('--genelist', '-g', required=True, help='Location of input genelist')
