@@ -16,6 +16,7 @@
 ###  Could easily be modified to only expand upstream or downstream
 ###  --> just don't call find_upstream_nodes() or find_downstream_nodes()
 ###      in get_layer()
+###
 
 import argparse
 import re
@@ -34,19 +35,21 @@ nLayers = int(args.layer)
 if nLayers < 1:
     raise ValueError('Number of layers must be greater than or equal to 1')
 
-## Read the genes into list called geneset
+## Read the genes into list
 def parse_geneset(inputgeneset):
     geneset = []
     for gene in inputgeneset:
         geneset.append(gene.rstrip("\n "))
     return geneset
 
+## Read the networkfile into a list
 def parse_networkfile(inputnetwork):
     networkfile = []
     for line in inputnetwork:
         networkfile.append(line.rstrip("\n"))
     return networkfile
 
+## Find all upstream nodes in a network corresponding to a gene symbol
 def find_upstream_nodes(gene, network):
     upstreamNode = []
     for line in network:
@@ -55,6 +58,7 @@ def find_upstream_nodes(gene, network):
             upstreamNode.append(str(line[0])+"\t"+str(line[1]))
     return upstreamNode
 
+## Find all downstream nodes in a network corresponding to a gene symbol
 def find_downstream_nodes(gene, network):
     downstreamNode = []
     for line in network:
@@ -63,6 +67,9 @@ def find_downstream_nodes(gene, network):
             downstreamNode.append(str(line[0])+'\t'+str(line[1]))
     return downstreamNode
 
+## Run both find_upstream_nodes() and find_downstream_nodes()
+## for a given gene. If there are no nodes of either class, dont'
+## append the result to the layer_interation list. Finally, return the list.
 def get_layer(inGene, inNetwork):
     layer_interaction = []
 
@@ -78,6 +85,7 @@ def get_layer(inGene, inNetwork):
 
     return layer_interaction
 
+## For all genes in a layer, run get_layer() and store the results
 def runlayer(inputgenes=inputgenes, inputnetworkfile=inputnetworkfile):
     networkLayer = []
     for gene in geneset:
@@ -91,6 +99,7 @@ def runlayer(inputgenes=inputgenes, inputnetworkfile=inputnetworkfile):
             interactionLayer.append(interaction)
     return interactionLayer
 
+## Save the runlayer() results as a new 'gene set' to input later
 def collateGenes(inputlist):
     collatedGenes = []
     for sourcetarget in inputlist:
@@ -100,14 +109,15 @@ def collateGenes(inputlist):
     return collatedGenes
 
 if __name__== "__main__":
-    # main()
     geneset = parse_geneset(inputgenes)
     networkfile = parse_networkfile(inputnetworkfile)
 
+    # Iteratively use runlayer() output as new geneset nLayers times
     for i in range(nLayers):
         outgenes = runlayer(inputgenes=geneset, inputnetworkfile=networkfile)
         geneset = collateGenes(outgenes)
         geneset = list(set(geneset))
 
+    # Print the final results to stdout
     for item in outgenes:
         print item

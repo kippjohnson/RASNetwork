@@ -1,0 +1,199 @@
+File created with bingo (c) on Jul 19, 2015 at 3:14:57 PM
+
+ontology: namespace
+curator:  bingo
+
+Selected ontology file : bundle://104.0:1/data/GO_Biological_Process
+Selected annotation file : bundle://104.0:1/data/H_sapiens_default
+Discarded evidence codes : 
+Overrepresentation
+Selected statistical test : Hypergeometric test
+Selected correction : Benjamini & Hochberg False Discovery Rate (FDR) correction
+Selected significance level : 0.05
+Testing option : Use whole annotation as reference set
+The selected cluster :
+NRAS	MAP2K1	RIT1	KRAS	SOS1	
+
+No annotations were retrieved for the following entities:
+
+
+GO-ID	p-value	corr p-value	x	n	X	N	Description	Genes in test set
+7264	3.4263E-9	1.2369E-6	5	292	5	14305	small GTPase mediated signal transduction	NRAS|MAP2K1|RIT1|KRAS|SOS1
+7265	1.7698E-8	3.1945E-6	4	112	5	14305	Ras protein signal transduction	NRAS|MAP2K1|KRAS|SOS1
+46578	3.4455E-7	3.9831E-5	4	234	5	14305	regulation of Ras protein signal transduction	NRAS|MAP2K1|KRAS|SOS1
+35022	5.8629E-7	3.9831E-5	2	4	5	14305	positive regulation of Rac protein signal transduction	NRAS|KRAS
+51056	6.2993E-7	3.9831E-5	4	272	5	14305	regulation of small GTPase mediated signal transduction	NRAS|MAP2K1|KRAS|SOS1
+35556	6.6201E-7	3.9831E-5	5	833	5	14305	intracellular signal transduction	NRAS|MAP2K1|RIT1|KRAS|SOS1
+23034	3.4487E-6	1.7785E-4	5	1158	5	14305	intracellular signaling pathway	NRAS|MAP2K1|RIT1|KRAS|SOS1
+35020	5.3691E-6	2.4228E-4	2	11	5	14305	regulation of Rac protein signal transduction	NRAS|KRAS
+7568	1.0051E-5	4.0315E-4	3	145	5	14305	aging	NRAS|MAP2K1|KRAS
+32228	1.6674E-5	5.1441E-4	2	19	5	14305	regulation of synaptic transmission, GABAergic	NRAS|KRAS
+46579	1.6674E-5	5.1441E-4	2	19	5	14305	positive regulation of Ras protein signal transduction	NRAS|KRAS
+48169	1.8524E-5	5.1441E-4	2	20	5	14305	regulation of long-term neuronal synaptic plasticity	NRAS|KRAS
+51057	1.8524E-5	5.1441E-4	2	20	5	14305	positive regulation of small GTPase mediated signal transduction	NRAS|KRAS
+8542	2.6894E-5	6.9348E-4	2	24	5	14305	visual learning	NRAS|KRAS
+7632	3.4188E-5	8.2279E-4	2	27	5	14305	visual behavior	NRAS|KRAS
+7165	3.8818E-5	8.3325E-4	5	1878	5	14305	signal transduction	NRAS|MAP2K1|RIT1|KRAS|SOS1
+9966	4.0499E-5	8.3325E-4	4	773	5	14305	regulation of signal transduction	NRAS|MAP2K1|KRAS|SOS1
+23051	4.1547E-5	8.3325E-4	4	778	5	14305	regulation of signaling process	NRAS|MAP2K1|KRAS|SOS1
+8306	5.1385E-5	8.8575E-4	2	33	5	14305	associative learning	NRAS|KRAS
+48522	5.3726E-5	8.8575E-4	5	2004	5	14305	positive regulation of cellular process	NRAS|MAP2K1|RIT1|KRAS|SOS1
+48168	5.7889E-5	8.8575E-4	2	35	5	14305	regulation of neuronal synaptic plasticity	NRAS|KRAS
+7569	5.7889E-5	8.8575E-4	2	35	5	14305	cell aging	NRAS|KRAS
+42127	5.8439E-5	8.8575E-4	4	848	5	14305	regulation of cell proliferation	NRAS|MAP2K1|RIT1|KRAS
+42981	5.9537E-5	8.8575E-4	4	852	5	14305	regulation of apoptosis	NRAS|RIT1|KRAS|SOS1
+43067	6.1780E-5	8.8575E-4	4	860	5	14305	regulation of programmed cell death	NRAS|RIT1|KRAS|SOS1
+10941	6.3794E-5	8.8575E-4	4	867	5	14305	regulation of cell death	NRAS|RIT1|KRAS|SOS1
+23033	6.7903E-5	9.0789E-4	5	2100	5	14305	signaling pathway	NRAS|MAP2K1|RIT1|KRAS|SOS1
+23046	7.7643E-5	9.6652E-4	5	2157	5	14305	signaling process	NRAS|MAP2K1|RIT1|KRAS|SOS1
+23060	7.7643E-5	9.6652E-4	5	2157	5	14305	signal transmission	NRAS|MAP2K1|RIT1|KRAS|SOS1
+48518	8.7275E-5	1.0502E-3	5	2208	5	14305	positive regulation of biological process	NRAS|MAP2K1|RIT1|KRAS|SOS1
+44057	1.0043E-4	1.1695E-3	3	313	5	14305	regulation of system process	NRAS|MAP2K1|KRAS
+35466	1.1346E-4	1.2799E-3	4	1003	5	14305	regulation of signaling pathway	NRAS|MAP2K1|KRAS|SOS1
+43524	1.3373E-4	1.4629E-3	2	53	5	14305	negative regulation of neuron apoptosis	NRAS|KRAS
+7612	1.4408E-4	1.5297E-3	2	55	5	14305	learning	NRAS|KRAS
+48167	1.5480E-4	1.5967E-3	2	57	5	14305	regulation of synaptic plasticity	NRAS|KRAS
+43066	1.7321E-4	1.7369E-3	3	376	5	14305	negative regulation of apoptosis	NRAS|RIT1|KRAS
+43069	1.8013E-4	1.7575E-3	3	381	5	14305	negative regulation of programmed cell death	NRAS|RIT1|KRAS
+60548	1.9159E-4	1.8201E-3	3	389	5	14305	negative regulation of cell death	NRAS|RIT1|KRAS
+10646	1.9719E-4	1.8253E-3	4	1154	5	14305	regulation of cell communication	NRAS|MAP2K1|KRAS|SOS1
+7610	3.2708E-4	2.9519E-3	3	466	5	14305	behavior	NRAS|MAP2K1|KRAS
+48308	3.4953E-4	2.9642E-3	1	1	5	14305	organelle inheritance	MAP2K1
+48313	3.4953E-4	2.9642E-3	1	1	5	14305	Golgi inheritance	MAP2K1
+51146	3.5307E-4	2.9642E-3	2	86	5	14305	striated muscle cell differentiation	NRAS|KRAS
+43523	3.9530E-4	3.2432E-3	2	91	5	14305	regulation of neuron apoptosis	NRAS|KRAS
+51384	4.4907E-4	3.6026E-3	2	97	5	14305	response to glucocorticoid stimulus	MAP2K1|KRAS
+23052	5.0106E-4	3.9323E-3	5	3131	5	14305	signaling	NRAS|MAP2K1|RIT1|KRAS|SOS1
+31960	5.1608E-4	3.9640E-3	2	104	5	14305	response to corticosteroid stimulus	MAP2K1|KRAS
+43406	5.5643E-4	4.1848E-3	2	108	5	14305	positive regulation of MAP kinase activity	MAP2K1|KRAS
+7611	6.0897E-4	4.4865E-3	2	113	5	14305	learning or memory	NRAS|KRAS
+42692	6.4161E-4	4.6324E-3	2	116	5	14305	muscle cell differentiation	NRAS|KRAS
+32968	6.9896E-4	4.7608E-3	1	2	5	14305	positive regulation of RNA elongation from RNA polymerase II promoter	MAP2K1
+34111	6.9896E-4	4.7608E-3	1	2	5	14305	negative regulation of homotypic cell-cell adhesion	MAP2K1
+34243	6.9896E-4	4.7608E-3	1	2	5	14305	regulation of RNA elongation from RNA polymerase II promoter	MAP2K1
+50804	7.9273E-4	5.2995E-3	2	129	5	14305	regulation of synaptic transmission	NRAS|KRAS
+30154	8.3558E-4	5.4844E-3	4	1668	5	14305	cell differentiation	NRAS|MAP2K1|RIT1|KRAS
+51969	9.1962E-4	5.8634E-3	2	139	5	14305	regulation of transmission of nerve impulse	NRAS|KRAS
+48869	9.2909E-4	5.8634E-3	4	1714	5	14305	cellular developmental process	NRAS|MAP2K1|RIT1|KRAS
+9416	9.8652E-4	5.8634E-3	2	144	5	14305	response to light stimulus	NRAS|KRAS
+2568	1.0483E-3	5.8634E-3	1	3	5	14305	somatic diversification of T cell receptor genes	RIT1
+32784	1.0483E-3	5.8634E-3	1	3	5	14305	regulation of RNA elongation	MAP2K1
+32786	1.0483E-3	5.8634E-3	1	3	5	14305	positive regulation of RNA elongation	MAP2K1
+2681	1.0483E-3	5.8634E-3	1	3	5	14305	somatic recombination of T cell receptor gene segments	RIT1
+31077	1.0483E-3	5.8634E-3	1	3	5	14305	post-embryonic camera-type eye development	RIT1
+33153	1.0483E-3	5.8634E-3	1	3	5	14305	T cell receptor V(D)J recombination	RIT1
+31644	1.0557E-3	5.8634E-3	2	149	5	14305	regulation of neurological system process	NRAS|KRAS
+43405	1.0984E-3	6.0077E-3	2	152	5	14305	regulation of MAP kinase activity	MAP2K1|KRAS
+48523	1.2350E-3	6.6541E-3	4	1844	5	14305	negative regulation of cellular process	NRAS|MAP2K1|RIT1|KRAS
+34110	1.3975E-3	7.3117E-3	1	4	5	14305	regulation of homotypic cell-cell adhesion	MAP2K1
+3056	1.3975E-3	7.3117E-3	1	4	5	14305	regulation of vascular smooth muscle contraction	MAP2K1
+48519	1.7593E-3	9.0732E-3	4	2020	5	14305	negative regulation of biological process	NRAS|MAP2K1|RIT1|KRAS
+48812	1.8731E-3	9.5239E-3	2	199	5	14305	neuron projection morphogenesis	MAP2K1|RIT1
+9314	2.2024E-3	1.1043E-2	2	216	5	14305	response to radiation	NRAS|KRAS
+10324	2.3248E-3	1.1341E-2	2	222	5	14305	membrane invagination	NRAS|KRAS
+6897	2.3248E-3	1.1341E-2	2	222	5	14305	endocytosis	NRAS|KRAS
+48545	2.3872E-3	1.1490E-2	2	225	5	14305	response to steroid hormone stimulus	MAP2K1|KRAS
+48858	2.5575E-3	1.2139E-2	2	233	5	14305	cell projection morphogenesis	MAP2K1|RIT1
+30036	2.6009E-3	1.2139E-2	2	235	5	14305	actin cytoskeleton organization	NRAS|KRAS
+45860	2.6228E-3	1.2139E-2	2	236	5	14305	positive regulation of protein kinase activity	MAP2K1|KRAS
+48569	2.7935E-3	1.2430E-2	1	8	5	14305	post-embryonic organ development	RIT1
+31175	2.8009E-3	1.2430E-2	2	244	5	14305	neuron projection development	MAP2K1|RIT1
+32990	2.8235E-3	1.2430E-2	2	245	5	14305	cell part morphogenesis	MAP2K1|RIT1
+33674	2.8235E-3	1.2430E-2	2	245	5	14305	positive regulation of kinase activity	MAP2K1|KRAS
+30029	2.9381E-3	1.2779E-2	2	250	5	14305	actin filament-based process	NRAS|KRAS
+51347	3.0314E-3	1.3028E-2	2	254	5	14305	positive regulation of transferase activity	MAP2K1|KRAS
+32402	3.1422E-3	1.3190E-2	1	9	5	14305	melanosome transport	MAP2K1
+47496	3.1422E-3	1.3190E-2	1	9	5	14305	vesicle transport along microtubule	MAP2K1
+61061	3.2950E-3	1.3672E-2	2	265	5	14305	muscle structure development	NRAS|KRAS
+32401	3.4909E-3	1.3698E-2	1	10	5	14305	establishment of melanosome localization	MAP2K1
+51904	3.4909E-3	1.3698E-2	1	10	5	14305	pigment granule transport	MAP2K1
+51000	3.4909E-3	1.3698E-2	1	10	5	14305	positive regulation of nitric-oxide synthase activity	KRAS
+33151	3.4909E-3	1.3698E-2	1	10	5	14305	V(D)J recombination	RIT1
+22408	3.4909E-3	1.3698E-2	1	10	5	14305	negative regulation of cell-cell adhesion	MAP2K1
+9967	3.5692E-3	1.3855E-2	2	276	5	14305	positive regulation of signal transduction	NRAS|KRAS
+51239	3.6909E-3	1.4050E-2	3	1067	5	14305	regulation of multicellular organismal process	NRAS|MAP2K1|KRAS
+23056	3.6974E-3	1.4050E-2	2	281	5	14305	positive regulation of signaling process	NRAS|KRAS
+51905	3.8394E-3	1.4438E-2	1	11	5	14305	establishment of pigment granule localization	MAP2K1
+16043	4.4064E-3	1.6399E-2	4	2563	5	14305	cellular component organization	NRAS|MAP2K1|RIT1|KRAS
+902	4.5970E-3	1.6934E-2	2	314	5	14305	cell morphogenesis	MAP2K1|RIT1
+32400	4.8845E-3	1.7811E-2	1	14	5	14305	melanosome localization	MAP2K1
+48666	4.9473E-3	1.7860E-2	2	326	5	14305	neuron development	MAP2K1|RIT1
+48856	5.0512E-3	1.8054E-2	4	2656	5	14305	anatomical structure development	NRAS|MAP2K1|RIT1|KRAS
+32770	5.2327E-3	1.8163E-2	1	15	5	14305	positive regulation of monooxygenase activity	KRAS
+46632	5.2327E-3	1.8163E-2	1	15	5	14305	alpha-beta T cell differentiation	RIT1
+51875	5.2327E-3	1.8163E-2	1	15	5	14305	pigment granule localization	MAP2K1
+32989	5.7480E-3	1.9762E-2	2	352	5	14305	cellular component morphogenesis	MAP2K1|RIT1
+10149	5.9287E-3	2.0191E-2	1	17	5	14305	senescence	MAP2K1
+30030	6.1039E-3	2.0594E-2	2	363	5	14305	cell projection organization	MAP2K1|RIT1
+60674	6.2766E-3	2.0683E-2	1	18	5	14305	placenta blood vessel development	MAP2K1
+35176	6.2766E-3	2.0683E-2	1	18	5	14305	social behavior	KRAS
+45859	6.3023E-3	2.0683E-2	2	369	5	14305	regulation of protein kinase activity	MAP2K1|KRAS
+46631	6.6243E-3	2.0910E-2	1	19	5	14305	alpha-beta T cell activation	RIT1
+50999	6.6243E-3	2.0910E-2	1	19	5	14305	regulation of nitric-oxide synthase activity	KRAS
+8285	6.6396E-3	2.0910E-2	2	379	5	14305	negative regulation of cell proliferation	MAP2K1|RIT1
+35468	6.6737E-3	2.0910E-2	2	380	5	14305	positive regulation of signaling pathway	NRAS|KRAS
+16044	6.7424E-3	2.0910E-2	2	382	5	14305	cellular membrane organization	NRAS|KRAS
+43549	6.7768E-3	2.0910E-2	2	383	5	14305	regulation of kinase activity	MAP2K1|KRAS
+61024	6.7768E-3	2.0910E-2	2	383	5	14305	membrane organization	NRAS|KRAS
+51338	7.3032E-3	2.2205E-2	2	398	5	14305	regulation of transferase activity	MAP2K1|KRAS
+7030	7.3196E-3	2.2205E-2	1	21	5	14305	Golgi organization	MAP2K1
+9628	7.5189E-3	2.2503E-2	2	404	5	14305	response to abiotic stimulus	NRAS|KRAS
+2562	7.6671E-3	2.2503E-2	1	22	5	14305	somatic diversification of immune receptors via germline recombination within a single locus	RIT1
+16444	7.6671E-3	2.2503E-2	1	22	5	14305	somatic cell DNA recombination	RIT1
+51385	7.6671E-3	2.2503E-2	1	22	5	14305	response to mineralocorticoid stimulus	KRAS
+6996	7.7479E-3	2.2556E-2	3	1382	5	14305	organelle organization	NRAS|MAP2K1|KRAS
+10647	7.8480E-3	2.2665E-2	2	413	5	14305	positive regulation of cell communication	NRAS|KRAS
+48538	8.0145E-3	2.2962E-2	1	23	5	14305	thymus development	RIT1
+32320	8.3617E-3	2.3220E-2	1	24	5	14305	positive regulation of Ras GTPase activity	MAP2K1
+2200	8.3617E-3	2.3220E-2	1	24	5	14305	somatic diversification of immune receptors	RIT1
+10970	8.3617E-3	2.3220E-2	1	24	5	14305	microtubule-based transport	MAP2K1
+33059	8.3617E-3	2.3220E-2	1	24	5	14305	cellular pigmentation	MAP2K1
+9725	8.9141E-3	2.4486E-2	2	441	5	14305	response to hormone stimulus	MAP2K1|KRAS
+30182	8.9534E-3	2.4486E-2	2	442	5	14305	neuron differentiation	MAP2K1|RIT1
+7010	9.1906E-3	2.4946E-2	2	448	5	14305	cytoskeleton organization	NRAS|KRAS
+48678	9.4030E-3	2.5332E-2	1	27	5	14305	response to axon injury	MAP2K1
+8284	9.6329E-3	2.5691E-2	2	459	5	14305	positive regulation of cell proliferation	NRAS|KRAS
+51353	9.7499E-3	2.5691E-2	1	28	5	14305	positive regulation of oxidoreductase activity	KRAS
+22407	9.7499E-3	2.5691E-2	1	28	5	14305	regulation of cell-cell adhesion	MAP2K1
+32768	1.0097E-2	2.6222E-2	1	29	5	14305	regulation of monooxygenase activity	KRAS
+43547	1.0097E-2	2.6222E-2	1	29	5	14305	positive regulation of GTPase activity	MAP2K1
+32502	1.0698E-2	2.7586E-2	4	3235	5	14305	developmental process	NRAS|MAP2K1|RIT1|KRAS
+9719	1.1061E-2	2.8312E-2	2	493	5	14305	response to endogenous stimulus	MAP2K1|KRAS
+60711	1.1137E-2	2.8312E-2	1	32	5	14305	labyrinthine layer development	MAP2K1
+8543	1.1483E-2	2.8589E-2	1	33	5	14305	fibroblast growth factor receptor signaling pathway	SOS1
+51650	1.1483E-2	2.8589E-2	1	33	5	14305	establishment of vesicle localization	MAP2K1
+51705	1.1483E-2	2.8589E-2	1	33	5	14305	behavioral interaction between organisms	KRAS
+51254	1.1631E-2	2.8759E-2	2	506	5	14305	positive regulation of RNA metabolic process	MAP2K1|RIT1
+42325	1.2169E-2	2.9884E-2	2	518	5	14305	regulation of phosphorylation	MAP2K1|KRAS
+19229	1.2522E-2	3.0543E-2	1	36	5	14305	regulation of vasoconstriction	MAP2K1
+6940	1.3214E-2	3.1536E-2	1	38	5	14305	regulation of smooth muscle contraction	MAP2K1
+51648	1.3214E-2	3.1536E-2	1	38	5	14305	vesicle localization	MAP2K1
+19220	1.3278E-2	3.1536E-2	2	542	5	14305	regulation of phosphate metabolic process	MAP2K1|KRAS
+51174	1.3278E-2	3.1536E-2	2	542	5	14305	regulation of phosphorus metabolic process	MAP2K1|KRAS
+43085	1.3802E-2	3.2565E-2	2	553	5	14305	positive regulation of catalytic activity	MAP2K1|KRAS
+51341	1.5287E-2	3.5835E-2	1	44	5	14305	regulation of oxidoreductase activity	KRAS
+50794	1.5566E-2	3.6168E-2	5	6223	5	14305	regulation of cellular process	NRAS|MAP2K1|RIT1|KRAS|SOS1
+16192	1.5629E-2	3.6168E-2	2	590	5	14305	vesicle-mediated transport	NRAS|KRAS
+48699	1.5833E-2	3.6406E-2	2	594	5	14305	generation of neurons	MAP2K1|RIT1
+30705	1.5977E-2	3.6505E-2	1	46	5	14305	cytoskeleton-dependent intracellular transport	MAP2K1
+7162	1.6667E-2	3.7842E-2	1	48	5	14305	negative regulation of cell adhesion	MAP2K1
+48468	1.7829E-2	4.0226E-2	2	632	5	14305	cell development	MAP2K1|RIT1
+22008	1.8099E-2	4.0453E-2	2	637	5	14305	neurogenesis	MAP2K1|RIT1
+44093	1.8153E-2	4.0453E-2	2	638	5	14305	positive regulation of molecular function	MAP2K1|KRAS
+43473	1.8735E-2	4.1493E-2	1	54	5	14305	pigmentation	MAP2K1
+51092	1.9079E-2	4.1884E-2	1	55	5	14305	positive regulation of NF-kappaB transcription factor activity	KRAS
+45935	1.9144E-2	4.1884E-2	2	656	5	14305	positive regulation of nucleobase, nucleoside, nucleotide and nucleic acid metabolic process	MAP2K1|RIT1
+1892	1.9424E-2	4.2241E-2	1	56	5	14305	embryonic placenta development	MAP2K1
+51291	1.9768E-2	4.2731E-2	1	57	5	14305	protein heterooligomerization	MAP2K1
+50789	2.0156E-2	4.3311E-2	5	6553	5	14305	regulation of biological process	NRAS|MAP2K1|RIT1|KRAS|SOS1
+51173	2.0329E-2	4.3424E-2	2	677	5	14305	positive regulation of nitrogen compound metabolic process	MAP2K1|RIT1
+30217	2.1487E-2	4.5628E-2	1	62	5	14305	T cell differentiation	RIT1
+30216	2.1830E-2	4.6086E-2	1	63	5	14305	keratinocyte differentiation	MAP2K1
+9791	2.2517E-2	4.7259E-2	1	65	5	14305	post-embryonic development	RIT1
+9913	2.3546E-2	4.9134E-2	1	68	5	14305	epidermal cell differentiation	MAP2K1
+19221	2.4232E-2	4.9561E-2	1	70	5	14305	cytokine-mediated signaling pathway	KRAS
+6357	2.4506E-2	4.9561E-2	2	747	5	14305	regulation of transcription from RNA polymerase II promoter	MAP2K1|RIT1
+23049	2.4575E-2	4.9561E-2	1	71	5	14305	signal initiation by protein/peptide mediator	KRAS
+51656	2.4575E-2	4.9561E-2	1	71	5	14305	establishment of organelle localization	MAP2K1
+23036	2.4575E-2	4.9561E-2	1	71	5	14305	initiation of signal transduction	KRAS
+23038	2.4575E-2	4.9561E-2	1	71	5	14305	signal initiation by diffusible mediator	KRAS
